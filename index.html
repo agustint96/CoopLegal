@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoramiento legal a cooperativas y mutuales</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="contenedor--left">
+            <h1>Asesoramiento legal a Cooperativas y mutuales</h1>
+            <p>
+               Brindamos apoyo legal especializado para cooperativas y mutuales, ayudándote a cumplir con la normativa vigente, optimizar procesos internos y proteger los derechos de tu organización. <br>
+               Nuestro enfoque es práctico, cercano y orientado a las personas.
+            </p>
+            <button class="custom-learn-more-btn">
+            <span class="button-text">Ver más</span>
+            <div class="circle"></div>
+            
+            </button>
+
+        </div>
+        <div class="contenedor--right">
+            <img src="./images/imagen right.jpg" alt="">
+        </div>
+    </div>
+
+    
+
+
+
+
+
+<!-- JS --> 
+<script>
+    const button = document.querySelector(".contenedor--left button");
+    button.addEventListener("click", (e) => {
+        e.preventDefault(); // evita navegación inmediata
+        document.body.classList.add("fade-out"); // aplica la animación
+        setTimeout(() => {
+            window.location.href = "PaginaPrincipal.html"; // reemplaza con la URL de tu segunda página
+        }, 500); // coincide con la duración de la animación en segundos * 1000
+    });
+</script>
+</body>
+</html>
