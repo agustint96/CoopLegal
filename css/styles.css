@@ -114,15 +114,22 @@
     .contenedor--left p,
     .contenedor--left button {
         margin: 10px 0; /* márgenes controlados para no exceder altura */
+        font-size: 0.9em;
     }
 
+    .contenedor--left h1{
+        font-size: 1.9em;
+         white-space: nowrap;
+  font-size: clamp(1rem, 4vw, 2em); /* cambia tamaño según ancho de pantalla */
+    }
     .contenedor--left button{
+        
        
     padding: 10px 20px;
     
     background-color: #2b384b;
     color: #f5f0e5;
-    font-size: 1rem;
+    font-size: 0.9em;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: "Lora", serif;
