@@ -53,23 +53,27 @@
 .contenedor--left button {
     margin: 1% 0;
     padding: 10px 20px;
-    border: 1px solid rgb(21, 21, 48); /* ocupa espacio desde el inicio */
+    
     background-color: #fff;
-    color: black;
+    color: #1c2b40;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: "Lora", serif;
     font-weight: 400;
+    border-radius: 4px;
+    border: 1px solid  #2b384b;
+    
 }
 
 .contenedor--left button:hover {
-    cursor: url('../images/pointer-32.png');
+    
     
     
     background-color: #2b384b;
     color: #f5f0e5; /* solo cambia el color */
     transform: scale(1.05); /* agranda visualmente */
+    
     
 }
 
