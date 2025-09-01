@@ -4,11 +4,14 @@
     box-sizing: border-box;
     
 }
-
+.body-index{
+    overflow: hidden;
+}
 
 .contenedor{
     display: flex;
     min-height: 100dvh;
+    
 }
 
 .contenedor--left {
