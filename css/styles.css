@@ -113,7 +113,7 @@
     .contenedor--left h1, 
     .contenedor--left p,
     .contenedor--left button {
-        margin: 10px 0; /* márgenes controlados para no exceder altura */
+        margin: 10px 10px; /* márgenes controlados para no exceder altura */
         font-size: 0.9em;
     }
 
