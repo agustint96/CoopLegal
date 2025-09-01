@@ -318,6 +318,7 @@ div.container-fluid{
     background: url(../images/socios2.png) no-repeat center center; /* centra la imagen y evita que se repita */
     background-size: cover; /* ajusta la imagen para cubrir todo el contenedor */
      background-attachment: fixed; /* hace que la imagen quede fija al hacer scroll */
+     color: #2b384b;
      
      
 }
