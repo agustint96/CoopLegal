@@ -17,7 +17,7 @@
         <div class="contenedor--left">
             <h1>Asesoramiento Legal a Cooperativas y Mutuales</h1>
             <p>
-               Brindamos apoyo legal especializado para cooperativas y mutuales, ayudándote a cumplir con la normativa vigente, optimizar procesos internos y proteger los derechos de tu organización. <br>
+               Brindamos apoyo legal a cooperativas y mutuales para cumplir con la normativa y acompañar su desarrollo. <br>
                Nuestro enfoque es práctico, cercano y orientado a las personas.
             </p>
             <button class="custom-learn-more-btn">
@@ -47,6 +47,12 @@
         setTimeout(() => {
             window.location.href = "PaginaPrincipal.html"; // reemplaza con la URL de tu segunda página
         }, 500); // coincide con la duración de la animación en segundos * 1000
+    });
+      // Cuando el usuario vuelve atrás
+    window.addEventListener("pageshow", (event) => {
+        if (event.persisted) { // significa que volvió del caché
+            document.body.classList.remove("fade-out");
+        }
     });
 </script>
 </body>

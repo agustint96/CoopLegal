@@ -24,7 +24,7 @@
 
 .contenedor--left h1{
     font-family: "Lora", serif;
-  font-weight: 400; /* negrita */
+  font-weight: 500; /* negrita */
   font-size: 2em;
 }
 
@@ -44,7 +44,10 @@
     margin: 3% 0%;
     font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 1.1em;
+  
+  
+  
 }
 
 .contenedor--left button {
@@ -151,7 +154,7 @@
 } 
 
 .nav-item{
-    color: #1c2b40;
+    color: #2b384b;
     font-family: "Poppins", sans-serif;
     
 }
@@ -180,6 +183,7 @@ div.container-fluid{
     font-family: 'Lora', serif;
     font-size: 2em;
     margin-bottom: 20px;
+    color: #2b384b;
 }
 
 .contenedor--2 p {
@@ -189,6 +193,8 @@ div.container-fluid{
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    
+    max-width: 700px;
 }
 
 .cajas {
@@ -217,13 +223,19 @@ div.container-fluid{
 
 .icono {
     font-size: 40px;
-    color: #1c2b40; /* podés cambiar el color a tu paleta */
+    color: #2b384b; /* podés cambiar el color a tu paleta */
     margin-bottom: 15px;
 }
 
 .caja h2 {
     
     margin-bottom: 10px;
+    color: #2b384b;
+    font-size: 1.9em;
+}
+.caja p{
+    text-align: left;
+    font-size: 0.9em;
     color: #1c2b40;
 }
 
@@ -239,7 +251,7 @@ div.container-fluid{
     font-family: 'Lora', serif;
     font-size: 2rem;
     margin-bottom: 40px;
-    color: #1c2b40;
+    color: #2b384b;
 }
 
 .servicio {
@@ -253,7 +265,7 @@ div.container-fluid{
 
 .icono-servicio {
     font-size: 60px;
-    color: #1c2b40; /* podés cambiar el color a tu paleta */
+    color: #2b384b; /* podés cambiar el color a tu paleta */
     flex-shrink: 0; /* para que no se deforme */
 }
 
@@ -265,13 +277,15 @@ div.container-fluid{
 .texto h2 {
     font-family: 'Lora', serif;
     margin-bottom: 10px;
-    color: #333;
+    color: #2b384b;
+    font-size: 1.9em;
 }
 
 .texto p {
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     color: #2b384b;
+    font-size: 0.9em;
 }
 
 /********       ANIMACION FONDO ***********************/
@@ -318,7 +332,7 @@ div.container-fluid{
     background: url(../images/socios2.png) no-repeat center center; /* centra la imagen y evita que se repita */
     background-size: cover; /* ajusta la imagen para cubrir todo el contenedor */
      background-attachment: fixed; /* hace que la imagen quede fija al hacer scroll */
-     color: #2b384b;
+    
      
      
 }
@@ -358,14 +372,9 @@ div.container-fluid{
     margin: 5px 0;
     font-size: 0.95rem;
     line-height: 1.4;
+    text-align: right;
 }
 .resaltado{
     background-color: #f5f0e5f5;
+    color: #2b384b;
 }
-.marca{
-    font-family: 'Lora', serif; ;
-    font-size: 1.9rem;
-    color: #1c2b40;
-    background-color: #f5f0e5;
-}
-
