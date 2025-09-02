@@ -237,7 +237,7 @@ div.container-fluid{
     
     margin-bottom: 10px;
     color: #2b384b;
-    font-size: 1.9em;
+    font-size: 1.8em;
 }
 .caja p{
     text-align: left;
@@ -255,7 +255,7 @@ div.container-fluid{
 .contenedor--3 h1 {
     text-align: center;
     font-family: 'Lora', serif;
-    font-size: 2rem;
+    font-size: 2em;
     margin-bottom: 40px;
     color: #2b384b;
 }
@@ -284,7 +284,7 @@ div.container-fluid{
     font-family: 'Lora', serif;
     margin-bottom: 10px;
     color: #2b384b;
-    font-size: 1.9em;
+    font-size: 1.8em;
 }
 
 .texto p {
@@ -350,6 +350,16 @@ div.container-fluid{
      background-attachment: fixed; /* hace que la imagen quede fija al hacer scroll */
      
 
+}
+.banner1 h1{
+    font-family: 'Lora',serif;
+    font-size: 2em;
+    
+}
+.banner1 p{
+    font-family:'Poppins', sans-serif ;
+    font-size: 0.9em;
+    
 }
 
 .contenedor--4 {
