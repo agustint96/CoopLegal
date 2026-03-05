@@ -42,13 +42,13 @@
 <script>
     const button = document.querySelector(".contenedor--left button");
     button.addEventListener("click", (e) => {
-        e.preventDefault(); // evita navegación inmediata
+        e.preventDefault(); 
         document.body.classList.add("fade-out"); // aplica la animación
         setTimeout(() => {
-            window.location.href = "PaginaPrincipal.html"; // reemplaza con la URL de tu segunda página
-        }, 500); // coincide con la duración de la animación en segundos * 1000
+            window.location.href = "PaginaPrincipal.html"; 
+        }, 500); 
     });
-      // Cuando el usuario vuelve atrás
+      
     window.addEventListener("pageshow", (event) => {
         if (event.persisted) { // significa que volvió del caché
             document.body.classList.remove("fade-out");
