@@ -402,6 +402,7 @@ div.container-fluid{
 }
 
 .correo:hover{
+	color: rgb(168, 187, 207);
     text-decoration: underline;
 }
 /************************* MEDIA QUERIES ************************/
