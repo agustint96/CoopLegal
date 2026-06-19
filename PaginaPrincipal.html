@@ -13,7 +13,87 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta name="description" content="">
-`</head>
+<style>
+    .servicio {
+        opacity: 0;
+        transform: translateX(-60px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .servicio.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Botón hamburguesa custom */
+    .hamburger-btn {
+        background-color: #f5f0e599;
+        box-shadow: 0 3px 6px #c3c7cc;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 40px;
+    }
+
+    .hamburger-btn .bar {
+        display: block;
+        width: 24px;
+        height: 2.5px;
+        background-color: #2b384b;
+        border-radius: 2px;
+        transition: transform 0.35s ease, opacity 0.25s ease, background-color 0.2s ease;
+        transform-origin: center;
+    }
+
+    .hamburger-btn .bar:hover {
+        background-color: #f5f0e5;
+    }
+
+    /* Estado abierto: X */
+    .hamburger-btn.open .bar:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+    }
+    .hamburger-btn.open .bar:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    .hamburger-btn.open .bar:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+    }
+
+    /* Ocultar el toggler original de Bootstrap */
+    .navbar-toggler {
+        display: none !important;
+    }
+
+    @media (min-width: 992px) {
+        .hamburger-btn {
+            display: none;
+        }
+    }
+</style>
+
+<style>
+    /* Nav shrink on scroll */
+    .navbar {
+        transition: padding 0.3s ease, box-shadow 0.3s ease;
+    }
+    .navbar .logo-nav {
+        transition: width 0.3s ease, opacity 0.3s ease;
+    }
+    .navbar.scrolled {
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .navbar.scrolled .logo-nav {
+        width: 0px;
+        opacity: 0;
+        overflow: hidden;
+    }
+</style></head>
 <body>
     <a href="https://wa.me/543516741687?text=Hola%20CoopLegal,%20quisiera%20hacer%20una%20consulta%20sobre%20sus%20servicios." target="_blank" class="whatsapp-float">
     <img src="./images/whatsapp2.png" alt="WhatsApp" /></a>
@@ -25,7 +105,14 @@
             <a href="PaginaPrincipal.html"><img class="logo-nav shake-bottom" src="./images/logo nav.png" alt=""></a>
             
 
-            <!-- Botón de hamburguesa -->
+            <!-- Botón hamburguesa custom -->
+            <button class="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Botón de hamburguesa (Bootstrap, oculto) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -148,6 +235,56 @@
     </div>
 </div>
 
+
+<script>
+    const servicios = document.querySelectorAll(".servicio");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("visible");
+                }, i * 150);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    servicios.forEach(s => observer.observe(s));
+</script>
+
+<script>
+    const hamburgerBtn = document.querySelector(".hamburger-btn");
+    const navCollapse = document.getElementById("navbarNav");
+
+    hamburgerBtn.addEventListener("click", () => {
+        const isOpen = hamburgerBtn.classList.toggle("open");
+        hamburgerBtn.setAttribute("aria-expanded", isOpen);
+
+        // Dispara el collapse de Bootstrap manualmente
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navCollapse);
+        bsCollapse.toggle();
+    });
+
+    // Sincronizar si Bootstrap cierra el menú por otro medio
+    navCollapse.addEventListener("hidden.bs.collapse", () => {
+        hamburgerBtn.classList.remove("open");
+        hamburgerBtn.setAttribute("aria-expanded", false);
+    });
+    navCollapse.addEventListener("shown.bs.collapse", () => {
+        hamburgerBtn.classList.add("open");
+        hamburgerBtn.setAttribute("aria-expanded", true);
+    });
+</script>
+<script>
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+</script>
 
 </body>
 </html>
